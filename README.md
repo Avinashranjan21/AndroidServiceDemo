@@ -1,4 +1,8 @@
 # AndroidServiceDemo
 Android Service Demo
 
-All the Sample is branch specific and checkout to other branch of different sample code for service.
+###Part 1:
+1. Create a simple service <br/>
+``` a simple java class that will extend Service```
+2. Two button to start and stop a service.<br/>
+``` Start Service and Stop service```

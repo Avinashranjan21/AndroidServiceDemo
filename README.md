@@ -14,9 +14,15 @@ Android Service Demo
 * Life cycle of service
     *  onCreate() --- 
     *  onStartCommand() --- 
-    *  onStartCommand() --- 
-    *  onDestroy() --- 
+    *  onDestroy() ---     
 
+* OnStartCommand return Flag (When android OS kill the service then how to restart service automatically)
+    *  START_STICKY --- Service restart automatically but intent is lost<br/>
+    ```return super.onStartCommand(intent, flags, startId);``` to ``` return START_STICKY; ```
+    *  START_REDELIVER_INTENT --- Service restart automatically and intent is also redelivered<br/>
+    ```return super.onStartCommand(intent, flags, startId);``` to ``` return START_REDELIVER_INTENT; ```
+    *  START_NOT_STICKY --- Service not restarted automatically and intent is also lost<br/>
+    ```return super.onStartCommand(intent, flags, startId);``` to ``` return START_NOT_STICKY; ```
 
 ###Part 1:
 1. Create a simple service <br/>

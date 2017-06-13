@@ -1,5 +1,6 @@
 package com.devschool.androidservicedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,10 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.btn_startService, R.id.btn_stopService})
     public void onViewClicked(View view) {
+        Intent mStartedServiceIntent = new Intent(this,StartedServiceClass.class);
         switch (view.getId()) {
             case R.id.btn_startService:
+                startService(mStartedServiceIntent);
                 break;
             case R.id.btn_stopService:
+                stopService(mStartedServiceIntent);
                 break;
         }
     }

@@ -10,6 +10,12 @@ Android Service Demo
 * Single operation at a time.
 * It does not return any value to the caller 
 * Call stopSelf() inside the service or stopService() if any component want to stop the service 
+* Service run in the main thread
+* Life cycle of service
+    *  onCreate() --- 
+    *  onStartCommand() --- 
+    *  onStartCommand() --- 
+    *  onDestroy() --- 
 
 
 ###Part 1:
